@@ -5,40 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip Calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Bill
+  <main>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <header>
+      <h1>Splitter</h1>
+    </header>
 
-  Number of People
+    <div id="app">
 
-  Tip Amount
-  / person
+      <div id="calculator-section">
+        <p>Bill</p>
 
-  Total
-  / person
+        <input type="number" id="bill-num">
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <p>Select Tip</p>
+
+        <button id="5-tip-btn" class="tip-btns" value=.05>5%</button>        
+        <button id="10-tip-btn" class="tip-btns" value=.10>10%</button>
+        <button id="15-tip-btn" class="tip-btns" value=.15>15%</button>
+        <button id="25-tip-btn" class="tip-btns" value=.25>25%</button>
+        <button id="50-tip-btn" class="tip-btns" value=.50>50%</button>
+        <button id="custom-tip-btn" class="tip-btns" value="0">Custom</button>
+      
+        <p>Number of people</p>
+        <input type="number" id="people-num" placeholder="1" value=1>
+      
+      </div>
+
+      <div id="result-section">
+        <div id="tip-amount">
+          <div class="result-text">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+
+          <div>
+            <p class="result-amount" id="tip-amount-num"></p>
+          </div>
+
+        </div>
+
+        <div id="total-amount">
+          <div class="result-text">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+
+          <div>
+            <p class="result-amount" id="total-amount-num"></p>
+          </div>
+
+        </div>
+        <button id="reset-btn">Reset</button>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="attribution">
+      <p>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | 
+        Coded by <a href="https://www.mrkrbrts.dev" target="_blank">MrkRbrts</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="./index.js"></script>
 </body>
 </html>

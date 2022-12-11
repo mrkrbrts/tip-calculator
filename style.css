@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    padding-top: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.active {
+    color: red;
+}
