@@ -38,10 +38,12 @@ function calculateTip() {
 
     console.log((billSubTotal * activeTip) / numPeople)
 
-    tipAmountResult.innerHTML = ((billSubTotal * activeTip) / numPeople)
-    totalAmountResult.innerHTML = ((billSubTotal + (billSubTotal * activeTip)) / numPeople)
+    let tipResult = ((billSubTotal * activeTip) / numPeople)
 
-    // bill + (bill*tip) = total
+    let totalResult = ((Number(billSubTotal) + Number(tipResult)) / Number(numPeople))
+
+    tipAmountResult.innerHTML = tipResult.toFixed(2)
+    totalAmountResult.innerHTML = totalResult.toFixed(2)
 }
 
 function removeClass(elements, className) {
@@ -58,3 +60,12 @@ allTipBtns.forEach(tipBtn =>  {
     })
 })
 
+billInput.addEventListener("input", function(){
+    calculateTip()
+})
+
+peopleInput.addEventListener("input", function(){
+    if (peopleInput.value != 0) {
+        calculateTip()
+    }
+})
